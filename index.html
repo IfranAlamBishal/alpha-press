@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="styles/styles.css">
 
 </head>
+
 <body class="font-poppins">
     <main class="min-h-screen bg-[#010313] bg-[url('images/background.png')] bg-no-repeat bg-center">
         <!-- Home screen -->
@@ -22,7 +23,7 @@
             <div class="flex flex-col justify-center items-center gap-10">
                 <hi class="text-9xl  font-anton">Alpha Press</hi>
                 <p>Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-                <button class="btn bg-white text-black">Play Now</button>
+                <button onclick="play()" class="btn bg-white text-black">Play Now</button>
             </div>
         </section>
         <!-- Play screen -->
@@ -93,7 +94,7 @@
                     <span class="font-bold">Score:</span>
                     <span>0</span>
                 </h1>
-                <button class="btn bg-white text-black">Play Again</button>
+                <button onclick="playAgain()" class="btn bg-white text-black">Play Again</button>
                 <p class="text-white">Practice will make you Pro</p>
             </div>
         </section>
@@ -101,5 +102,6 @@
     </main>
 
     <script src="scripts/alpha-press.js"></script>
+    <script src="scripts/utility.js"></script>
 </body>
 </html>
