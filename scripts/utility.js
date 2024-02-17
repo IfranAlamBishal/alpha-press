@@ -26,3 +26,18 @@ function removeBackgroundColor(elementId){
     alphabetId.classList.remove('bg-[#FFA500]');
 }
 
+function updateScore(){
+    const scoreElement = document.getElementById('current-score');
+    const scoreElementText = scoreElement.innerText;
+    const currentScore = parseInt(scoreElementText);
+    const updatedScore = currentScore + 1; 
+    scoreElement.innerText = updatedScore;
+}
+
+function updateLife(){
+    const lifeElement = document.getElementById('current-life');
+    const lifeElementText = lifeElement.innerText;
+    const currentLife = parseInt(lifeElementText);
+    const updatedLife = currentLife - 1; 
+    lifeElement.innerText = updatedLife;
+}

@@ -13,7 +13,8 @@ function gameLoop(){
     const alphabet = getARandomAlphabet();
     const shownAlphabet = document.getElementById('display-alphabet');
     shownAlphabet.innerText = alphabet;
-   changeBackgroundColor(alphabet);
+    changeBackgroundColor(alphabet);
+   
 }
 
 function checkPressedKey(event){
@@ -24,11 +25,13 @@ function checkPressedKey(event){
     //console.log(pressedKey , expectedKey);
 
     if(pressedKey === expectedKey){
+        updateScore();
         console.log('Matched');
-        removeBackgroundColor(pressedKey);
+       removeBackgroundColor(pressedKey);
         gameLoop();
     }
     else{
+        updateLife();
         console.log('failed');
     }
 }
