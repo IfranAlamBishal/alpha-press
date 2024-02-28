@@ -4,6 +4,7 @@ function play(){
     gameLoop();
 }
 function playAgain(){
+    reset();
     hideScreen('score');
     showScreeen('game');
     gameLoop();
@@ -26,13 +27,23 @@ function checkPressedKey(event){
 
     if(pressedKey === expectedKey){
         updateScore();
-        console.log('Matched');
+        // console.log('Matched');
        removeBackgroundColor(pressedKey);
         gameLoop();
     }
     else{
         updateLife();
-        console.log('failed');
+        removeBackgroundColor(expectedKey);
+
+        const noLife = document.getElementById('current-life');
+        const zeroLife = noLife.innerText;
+        
+        if(zeroLife < 1){
+            hideScreen('game');
+            showScreeen('score');
+            finalScore();
+        }
+        // console.log('failed');
     }
 }
 document.addEventListener('keyup', checkPressedKey);

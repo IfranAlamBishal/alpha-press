@@ -41,3 +41,18 @@ function updateLife(){
     const updatedLife = currentLife - 1; 
     lifeElement.innerText = updatedLife;
 }
+
+const reset = () => {
+    const resetLife = document.getElementById('current-life');
+    resetLife.innerText = 1;
+
+    const resetScore = document.getElementById('current-score');
+    resetScore.innerText = 0;
+
+}
+
+const finalScore = () => {
+    const finalScore = document.getElementById('final-score');
+    const currentScore = document.getElementById('current-score').innerText;
+    finalScore.innerText = currentScore;
+}
